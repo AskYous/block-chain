@@ -25,4 +25,8 @@ export class Block {
             + this.previousHash
         ).toString();
     }
+
+    isValid() {
+        return this.hash == this.calculateHash();
+    }
 }

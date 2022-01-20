@@ -25,4 +25,19 @@ export class Blockchain {
 
         fs.writeFileSync(file, output);
     }
+    isValid() {
+        for (let i = 1; i < this.chain.length; i++) {
+
+            const current = this.chain[i];
+            const previous = this.chain[i - 1];
+            const expected = this.chain[i].previousHash;
+            const actual = previous.calculateHash();
+
+            if (!current.isValid())
+                return false;
+            if (actual !== expected)
+                return false;
+        }
+        return true;
+    }
 }
