@@ -27,6 +27,8 @@ export class Block {
     }
 
     isValid() {
-        return this.hash == this.calculateHash();
+        const expected = this.calculateHash();
+        const actual = this.hash;
+        return expected === actual;
     }
 }

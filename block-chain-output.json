@@ -1,23 +1,22 @@
 [
     {
         "index": 0,
-        "createdAt": "2022-01-20T19:32:35.303Z",
+        "createdAt": "2022-01-20T20:28:08.735Z",
         "data": "I am the first block in the block chain",
-        "previousHash": null,
-        "hash": "948bd084f9daef0ce14db9c8380de20bb88f73528364f26c97f2df8b6a0b211b"
+        "hash": "bd458dd1f3f82a659cd16a5fc5ea98d9029791f527a555d3fac6406793703134"
     },
     {
         "index": 1,
-        "createdAt": "2022-01-20T19:32:35.305Z",
-        "data": "I am the second block.",
-        "previousHash": "948bd084f9daef0ce14db9c8380de20bb88f73528364f26c97f2df8b6a0b211b",
-        "hash": "012855397cd5a761e4c53a8dbdf131cd6a13831182823c69cb900cb71ab8a02b"
+        "createdAt": "2022-01-20T20:28:08.735Z",
+        "data": "CHANGED DATA",
+        "previousHash": "bd458dd1f3f82a659cd16a5fc5ea98d9029791f527a555d3fac6406793703134",
+        "hash": "14b9e92d58ff51bdca4d7c286e1af3fb74c377d7754adfc12e4cbe780edbb37e"
     },
     {
         "index": 2,
-        "createdAt": "2022-01-20T19:32:35.305Z",
+        "createdAt": "2022-01-20T20:28:08.735Z",
         "data": "I am the third block.",
-        "previousHash": "012855397cd5a761e4c53a8dbdf131cd6a13831182823c69cb900cb71ab8a02b",
-        "hash": "cbddc4dbe2c85aba7c8ae8b159c88494b56f0e8e9e8be222ebb27fbba91218f1"
+        "previousHash": "14b9e92d58ff51bdca4d7c286e1af3fb74c377d7754adfc12e4cbe780edbb37e",
+        "hash": "00d53c4d7575955c91a9c26f576dc10a7cb15e57a20edf2acdcf5360b0023f6d"
     }
 ]

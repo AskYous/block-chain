@@ -2,19 +2,16 @@ import fs from 'fs';
 import { Block } from "./Block.js";
 
 export class Blockchain {
-    /**
-     * @param {Block} genesisBlock
-     */
-    constructor(genesisBlock) {
+    constructor() {
         /** @type {Block[]} The chain */
-        this.chain = [genesisBlock];
+        this.chain = [];
     }
     getLatestBlock() {
         return this.chain[this.chain.length - 1]; // test this
     }
     /** @param {Block} block */
     addBlock(block) {
-        block.previousHash = this.getLatestBlock().hash;
+        block.previousHash = this.getLatestBlock()?.hash;
         block.hash = block.calculateHash();
         this.chain.push(block);
         block.index = this.chain.length - 1;
