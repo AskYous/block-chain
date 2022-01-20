@@ -1,0 +1,24 @@
+{
+  "name": "block-chain",
+  "version": "1.0.0",
+  "description": "An app to gain experience on block chains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AskYous/block-chain.git"
+  },
+  "author": "Yousef Shanawany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AskYous/block-chain/issues"
+  },
+  "homepage": "https://github.com/AskYous/block-chain#readme",
+  "dependencies": {
+    "@types/mocha": "^9.1.0",
+    "crypto-js": "^4.1.1",
+    "mocha": "^9.1.4"
+  }
+}
