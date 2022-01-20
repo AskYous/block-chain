@@ -1,0 +1,16 @@
+[
+    {
+        "index": 0,
+        "createdAt": "2022-01-20T19:22:23.493Z",
+        "data": "I am the first block in the block chain",
+        "previousHash": null,
+        "hash": "4b2411b481ed1dcf31f88293dcc47fa98be1b6ca43f6eb6f57674ecbe91f5258"
+    },
+    {
+        "index": 1,
+        "createdAt": "2022-01-20T19:22:23.495Z",
+        "data": "I am the second block.",
+        "previousHash": "4b2411b481ed1dcf31f88293dcc47fa98be1b6ca43f6eb6f57674ecbe91f5258",
+        "hash": "f7016d81a1e75d1d38d14ae76104a1397e80bb974f1192ec0511283ff4816b45"
+    }
+]

@@ -1,5 +1,5 @@
-import { Block } from "./Block";
-
+import fs from 'fs';
+import { Block } from "./Block.js";
 
 export class Blockchain {
     /**
@@ -10,7 +10,7 @@ export class Blockchain {
         this.chain = [genesisBlock];
     }
     getLatestBlock() {
-        return this.chain[-1]; // test this
+        return this.chain[this.chain.length - 1]; // test this
     }
     /** @param {Block} block */
     addBlock(block) {
@@ -18,5 +18,11 @@ export class Blockchain {
         block.hash = block.calculateHash();
         this.chain.push(block);
         block.index = this.chain.length - 1;
+    }
+    exportToFile() {
+        const output = JSON.stringify(this.chain, null, 4);
+        const file = "block-chain-output.json";
+
+        fs.writeFileSync(file, output);
     }
 }
