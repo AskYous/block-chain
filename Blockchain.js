@@ -5,6 +5,7 @@ export class Blockchain {
     constructor() {
         /** @type {Block[]} The chain */
         this.chain = [];
+        this.difficulty = 4;
     }
     getLatestBlock() {
         return this.chain[this.chain.length - 1]; // test this
@@ -12,7 +13,7 @@ export class Blockchain {
     /** @param {Block} block */
     addBlock(block) {
         block.previousHash = this.getLatestBlock()?.hash;
-        block.hash = block.calculateHash();
+        block.mineBlock(this.difficulty);
         this.chain.push(block);
         block.index = this.chain.length - 1;
     }
@@ -30,10 +31,8 @@ export class Blockchain {
             const expected = this.chain[i].previousHash;
             const actual = previous.calculateHash();
 
-            if (!current.isValid())
-                return false;
-            if (actual !== expected)
-                return false;
+            if (!current.isValid()) return false;
+            if (actual !== expected) return false;
         }
         return true;
     }

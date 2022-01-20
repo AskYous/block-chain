@@ -14,8 +14,8 @@ export class Block {
         this.createdAt = createdAt;
         this.data = data;
         this.previousHash = previousHash;
-        this.hash = this.calculateHash();
         this.nonce = 0;
+        this.hash = this.calculateHash();
     }
 
     calculateHash() {
@@ -34,11 +34,20 @@ export class Block {
         return expected === actual;
     }
 
+    /**
+     * @param {number} difficulty
+     */
     mineBlock(difficulty) {
+        console.log(`Mining block ${this.index}`);
+        while (!hashBeginningIsValid(this.hash)) {
+            this.nonce++;
+            this.hash = this.calculateHash();
+        }
         /** @param {string} hash */
-        function hashIsValid(hash) {
-            const expected = Array(difficulty).join("0");
-            const actual = hash
+        function hashBeginningIsValid(hash) {
+            const expected = Array(difficulty + 1).join("0");
+            const actual = hash.substring(0, difficulty)
+            return expected === actual;
         }
     }
 }
