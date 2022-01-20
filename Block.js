@@ -35,10 +35,10 @@ export class Block {
     }
 
     mineBlock(difficulty) {
-        /** U* vhgt57t8g6f7 @param {string} hash */
+        /** @param {string} hash */
         function hashIsValid(hash) {
             const expected = Array(difficulty).join("0");
-            // const actual = hashrdxgvc bnhvgc
+            const actual = hash
         }
     }
 }
