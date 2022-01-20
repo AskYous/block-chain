@@ -15,6 +15,7 @@ export class Block {
         this.data = data;
         this.previousHash = previousHash;
         this.hash = this.calculateHash();
+        this.nonce = 0;
     }
 
     calculateHash() {
@@ -23,6 +24,7 @@ export class Block {
             + this.createdAt
             + JSON.stringify(this.data)
             + this.previousHash
+            + this.nonce.toString()
         ).toString();
     }
 
@@ -30,5 +32,13 @@ export class Block {
         const expected = this.calculateHash();
         const actual = this.hash;
         return expected === actual;
+    }
+
+    mineBlock(difficulty) {
+        /** U* vhgt57t8g6f7 @param {string} hash */
+        function hashIsValid(hash) {
+            const expected = Array(difficulty).join("0");
+            // const actual = hashrdxgvc bnhvgc
+        }
     }
 }
